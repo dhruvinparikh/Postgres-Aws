@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { Client } = require('pg');
 var connectionString = "postgres://postgres:4qOmV5ZyNq2HnTTw0wdF@testing.cmi6xmxq1wpt.us-east-1.rds.amazonaws.com:5432/production";
 const client = new Client({
@@ -7,6 +8,7 @@ const client = new Client({
 });
 const app = express();
 const port = process.env.PORT || 5000;
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/users', (req, res,next) => {
