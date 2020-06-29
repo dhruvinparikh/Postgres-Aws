@@ -1,0 +1,53 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/aakashpatel/Desktop/fullapp/node-rds/package.json: Unexpected string in JSON at position 166
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "node-rds",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+      "client": "cd client && yarn start",
+      "server": "nodemon server.js",
+      "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "concurrently": "^5.2.0",
+      "express": "^4.17.1",
+      "mysql": "^2.18.1",
+      "nodemon": "^2.0.4",
+      "pg": "^8.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
