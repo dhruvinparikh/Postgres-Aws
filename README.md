@@ -4,10 +4,12 @@ its a node app fetching data from aws-rds datase :postgres
 
 - `ConnectionString` to connect database is used .
 
-### step to start a server
+### step to start a server and client
 
-- `cd client` 
-
-- `yarn start`
+- `cd server` 
+- `yarn server`
+ will start a server
+- `yarn client`
+will start a client
 
 - used concurrently to run both server together.
